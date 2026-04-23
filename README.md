@@ -8,7 +8,7 @@
 
 | 직책 | 성명 | 담당 업무 |
 | :--- | :--- | :--- |
-| **Total PM / PL** | **이지수** | **프로젝트 총괄 리딩, DB 설계(ERD), API 명세 확립 및 통합 관리** |
+| **Total PM / PL** | **이지수** | **프로젝트 총괄 , DB 설계(ERD), API 명세 확립 및 통합 관리** |
 | **Team Member** | **전이레** | Frontend / Backend Development |
 | **Team Member** | **김선철** | Frontend / Backend Development |
 | **Team Member** | **정인혁** | Frontend / Backend Development |
