@@ -1,4 +1,4 @@
-# 🌭 D-TO (Digital-To-Everyone)
+# 🌭 D-TO
 > **개인 맞춤형 접근성 최적화 커머스 플랫폼**
 
 ---
