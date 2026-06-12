@@ -339,10 +339,15 @@ CREATE TABLE orders (
     CONSTRAINT chk_orders_status CHECK (
         status IN (
             'PENDING',
-            'PAID',
-            'SHIPPING',
+            'PROCESSING',
+            'COMPLETED',
+            'BEFORE_SHIPMENT',
+            'IN_TRANSIT',
             'DELIVERED',
-            'CANCELLED'
+            'PARTIAL_CANCELLED',
+            'CANCELLED',
+            'RETURN_REQUESTED',
+            'RETURN_COMPLETED'
         )
     ),
 
@@ -379,6 +384,10 @@ CREATE TABLE order_items (
 
     price_at_order NUMBER,
 
+    status VARCHAR2(20) DEFAULT 'ORDERED' NOT NULL,
+
+    cancelled_at TIMESTAMP,
+
     CONSTRAINT fk_order_items_order
         FOREIGN KEY (order_id)
         REFERENCES orders(id),
@@ -387,9 +396,11 @@ CREATE TABLE order_items (
         FOREIGN KEY (product_id)
         REFERENCES products(id),
 
-    CONSTRAINT chk_order_items_source CHECK (
-        source IN ('INTERNAL','NAVER')
-    )
+    CONSTRAINT chk_order_items_source
+        CHECK (source IN ('INTERNAL','NAVER')),
+
+    CONSTRAINT chk_order_items_status
+        CHECK (status IN ('ORDERED','CANCELLED'))
 );
 
 -- 6-2. 결제
@@ -424,7 +435,7 @@ CREATE TABLE payments (
         status IN (
             'PENDING',
             'PROCESSING',
-            'CANCELED',
+            'CANCELLED',
             'COMPLETED',
             'FAILED'
         )
@@ -720,6 +731,13 @@ VALUES (43, '주목 상품', 'POPULARITY', 'ACTIVE');
 
 INSERT INTO meta_tags (id, name, type, status)
 VALUES (44, '특가 세일', 'POPULARITY', 'ACTIVE');
+
+-- ⑦ RELEASE_OR_UPDATE 관련 태그
+INSERT INTO meta_tags (id, name, type, status)
+VALUES (45, '신상품', 'RELEASE_OR_UPDATE', 'ACTIVE');
+
+INSERT INTO meta_tags (id, name, type, status)
+VALUES (46, '업데이트', 'RELEASE_OR_UPDATE', 'ACTIVE');
 
 
 
