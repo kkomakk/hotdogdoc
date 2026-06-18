@@ -1,57 +1,226 @@
-# 🌭 D-TO
-> **개인 맞춤형 접근성 최적화 커머스 플랫폼**
+## 📌 프로젝트 개요
+
+D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
+
+사용자는 상품 조회, 장바구니, 주문 및 결제, 배송 조회, 리뷰 작성 등의 기능을 이용할 수 있으며, 관리자는 상품 및 주문·배송 상태를 효율적으로 관리할 수 있습니다.
+
+특히 단순 상품 판매를 넘어 사용자의 행동 데이터를 분석하여 개인화 추천 서비스를 제공하는 것을 목표로 개발되었습니다.
+
+상품에는 메타태그가 부여되며, 사용자의 상품 조회, 북마크, 장바구니 추가, 주문 등의 활동에 따라 태그별 가중치가 누적됩니다. 이를 통해 사용자의 관심사를 분석하고 맞춤형 상품을 추천할 수 있는 구조를 구현했습니다.
+
+또한 접근성 향상을 위해 상품 이미지 대체 텍스트(Alt Text)를 제공하고, 사용자 환경에 맞는 접근성 설정 기능을 지원합니다.
+
+### 📅 개발 기간
+
+- 2026.05 ~ 2026.06
+
+### 👨‍💻 개발 인원
+
+- 총 4명
 
 ---
 
-## 👥 1. Team Information
-**"안녕하세요 팀2 D-TO입니다."**
+## ✨ 주요 기능
 
-| 직책 | 성명 | 담당 업무 |
-| :--- | :--- | :--- |
-| **Total PM / PL** | **이지수** | **프로젝트 총괄 , DB 설계(ERD), API 명세 확립 및 통합 관리** |
-| **Team Member** | **전이레** | Frontend / Backend Development |
-| **Team Member** | **정인혁** | Frontend / Backend Development |
+### 👤 사용자 기능
+
+#### 회원
+
+- 회원가입 / 로그인
+- JWT 기반 인증 및 인가
+- 마이페이지
+
+#### 상품
+
+- 상품 목록 조회
+- 상품 검색
+- 상품 상세 조회
+- 관련 상품 추천
+- 북마크(찜)
+
+#### 장바구니
+
+- 상품 추가
+- 수량 변경
+- 단건 삭제
+- 다건 삭제
+
+#### 주문 및 결제
+
+- 주문 생성
+- 배송지 관리
+- 토스페이먼츠 결제 연동
+- 주문 취소 및 부분 취소
+
+#### 주문 조회
+
+- 주문 목록 조회
+- 주문 상세 조회
+- 배송 조회
+- 반품 신청
+
+#### 리뷰
+
+- 리뷰 작성
+- 리뷰 수정
+- 리뷰 삭제
+- 상품별 리뷰 조회
+
+### 🎯 개인화 추천 기능
+
+- 메타태그 기반 상품 분류
+- 사용자 행동 데이터 수집
+- 조회 가중치 반영
+- 북마크 가중치 반영
+- 장바구니 가중치 반영
+- 주문 가중치 반영
+- 사용자 관심 태그 분석
+- 맞춤형 상품 추천
+
+### 🛠 관리자 기능
+
+#### 상품 관리
+
+- 상품 등록
+- 상품 수정
+- 상품 삭제
+
+#### 주문 및 배송 관리
+
+- 주문 목록 조회
+- 주문 상세 조회
+- 배송 상태 변경
+- 운송장 번호 관리
+
+#### 외부 상품 등록
+
+- 네이버 쇼핑 검색 API 연동
+- 검색 상품 등록 기능
 
 ---
 
-## 🛠 2. Tech Stack
-- **Backend:** Java 17, Spring Boot, Spring Security, JPA, Oracle Cloud DB
-- **Frontend:** React, JavaScript
-- **Infrastructure/Etc:** Toss Payments API, JWT, GitHub Actions
+## 🖥️ 데모 화면
+
+### 로그인
+
+![로그인](docs/login.png)
+
+### 상품 목록
+
+![상품목록](docs/product-list.png)
+
+### 상품 상세
+
+![상품상세](docs/product-detail.png)
+
+### 장바구니
+
+![장바구니](docs/cart.png)
+
+### 주문 및 결제
+
+![주문결제](docs/order-payment.png)
+
+### 주문 조회
+
+![주문조회](docs/order-history.png)
+
+### 관리자 주문 관리
+
+![관리자주문](docs/admin-order.png)
 
 ---
 
-## 📊 3. Full API Specification (Total List)
+## 🏗️ 시스템 아키텍처
 
-| 섹션 | API 명칭 | Method | 엔드포인트 | Request Body (JSON) | 비고 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. 인증** | 회원가입 | `POST` | `/api/auth/signup` | `{"email": "s", "password": "s", "name": "s"}` | |
-|      | 로그인 | `POST` | `/api/auth/login` | `{"email": "s", "password": "s"}` | JWT 발급 |
-|      | 프로필 조회 | `GET` | `/api/members/me` | `(None)` | 마이페이지 |
-|      | 배송지 추가 | `POST` | `/api/members/addresses` | `{"zipCode": "s", "baseAddress": "s", "detailAddress": "s", ...}` | |
-| **2. 접근성** | 설정 조회 | `GET` | `/api/accessibility` | `(None)` | **개인화 UI 근거** |
-|      | 설정 업데이트 | `PUT` | `/api/accessibility` | `{"fontSizeStep": n, "highContrastEnabled": b, ...}` | |
-| **3. 상품** | 목록/검색 | `GET` | `/api/products` | `(?category=HEALTH&keyword=s&page=n)` | **맞춤형 큐레이션** |
-|      | 상세 조회 | `GET` | `/api/products/{id}` | `(None)` | 대체텍스트 포함 |
-| **4. 장바구니** | 목록 조회 | `GET` | `/api/carts` | `(None)` | |
-|      | 상품 추가 | `POST` | `/api/carts` | `{"productId": n, "quantity": n}` | |
-|      | 수량 수정 | `PATCH` | `/api/carts/{id}` | `{"quantity": n}` | |
-|      | 상품 삭제 | `DELETE` | `/api/carts/{id}` | `(None)` | |
-| **5. 주문** | 주문 생성 | `POST` | `/api/orders` | `{"cartIdList": n[], "addressId": n}` | PENDING 생성 |
-|      | 결제 승인 | `POST` | `/api/payments/confirm` | `{"paymentKey": "s", "orderId": n, "amount": n}` | 토스 연동 |
-|      | 내 주문 내역 | `GET` | `/api/orders` | `(?page=n)` | |
-| **6. 리뷰** | 리뷰 조회 | `GET` | `/api/reviews` | `(?productId=n)` | |
-|      | 리뷰 작성 | `POST` | `/api/reviews` | `{"productId": n, "orderId": n, "rating": n, "content": "s"}` | |
-| **7. 관리자** | 상품 등록/수정 | `POST/PUT` | `/api/admin/products` | `{"name": "s", "price": n, "altText": "s", ...}` | **Admin 전용** |
-|      | 회원/주문 관리 | `GET/PATCH` | `/api/admin/...` | `{"role": "s", "status": "s"}` | **Admin 전용** |
-| **공통** | 이미지 업로드 | `POST` | `/api/common/images` | `(MultipartFile)` | 이미지 서버 저장 |
+![System Architecture](docs/system-architecture.png)
 
 ---
 
-## 🔗 4. Core Architecture
-- **ERD 기반 설계**: 모든 테이블 구조는 사용자의 접근성 설정과 카테고리 선호를 최우선으로 반영함.
-- **개인화 로직**: 로그인 시 유저의 `accessibility_settings`를 즉시 반영하여 폰트 및 고대비 모드 전환.
-- **보안**: Spring Security를 통한 일반 유저와 관리자(`ROLE_ADMIN`)의 API 접근 권한 분리.
+## 🎯 개인화 추천 구조
+
+```text
+상품 등록
+    ↓
+메타태그 부여
+    ↓
+사용자 행동 발생
+(조회 / 북마크 / 장바구니 / 주문)
+    ↓
+태그별 가중치 누적
+    ↓
+관심사 분석
+    ↓
+맞춤형 상품 추천
+```
 
 ---
-© 2026 D-TO Project Team. All rights reserved.
+
+## 🗄️ ERD
+
+![ERD](docs/erd.png)
+🔗 https://dbdiagram.io/d/Copy-of-Untitled-Diagram-6a2a5e209340ecc06573d84c
+---
+
+## 🛠️ 기술 스택
+
+### Backend
+
+- Java 21
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- JWT
+- Oracle Database
+- Redis
+- Maven
+
+### Frontend
+
+- React
+- Vite
+- React Query
+- Zustand
+- Tailwind CSS
+
+### External API
+
+- Toss Payments
+- Naver Shopping Search API
+
+### Collaboration
+
+- Git
+- GitHub
+- Notion
+- Discord
+
+---
+
+## 👥 팀원 소개
+
+| 이름 | 담당 |
+|------|------|
+| 이지수 | 프로젝트 총괄(PM), DB 설계(ERD), API 명세 확립 및 통합 관리 |
+| 전이레 | Frontend / Backend Development |
+| 정인혁 | Frontend / Backend Development |
+
+---
+
+## 📄 API 명세서
+
+D-TO 프로젝트의 전체 API 명세는 Notion을 통해 관리하고 있습니다.
+
+### API Documentation
+
+- 인증 / 회원 관리
+- 접근성 설정
+- 상품 조회 및 검색
+- 장바구니
+- 주문 / 결제
+- 리뷰
+- 관리자 기능
+
+🔗 https://www.notion.so/API-34ab3617b6918047b68cca2f660f7db7?source=copy_link
+
+---
