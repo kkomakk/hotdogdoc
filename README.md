@@ -53,13 +53,12 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 
 ![로그인](docs/login.png)
 
-### 상품 목록
+### 상품 화면
 
-![상품목록](docs/product-list.png)
-
-### 상품 상세
-
-![상품상세](docs/product-detail.png)
+<p align="center">
+  <img src="docs/product-list.png" width="45%">
+  <img src="docs/product-detail.png" width="45%">
+</p>
 
 ### 장바구니
 
@@ -67,15 +66,17 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 
 ### 주문 및 결제
 
-![주문결제](docs/order-payment.png)
+<p align="center">
+  <img src="docs/order.png" width="45%">
+  <img src="docs/payment.png" width="45%">
+</p>
 
-### 주문 조회
+### 관리자 상품 기능
 
-![주문조회](docs/order-history.png)
-
-### 관리자 주문 관리
-
-![관리자주문](docs/admin-order.png)
+<p align="center">
+  <img src="docs/admin-product.png" width="45%">
+  <img src="docs/admin-product2.png" width="45%">
+</p>
 
 ---
 
