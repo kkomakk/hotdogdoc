@@ -51,7 +51,9 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 
 ### 로그인
 
-![로그인](docs/login.png)
+<p align="center">
+  <img src="docs/login.png" width="45%">
+</p>
 
 ### 상품 화면
 
@@ -62,7 +64,9 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 
 ### 장바구니
 
-![장바구니](docs/cart.png)
+<p align="center">
+  <img src="docs/cart.png" width="45%">
+</p>
 
 ### 주문 및 결제
 
