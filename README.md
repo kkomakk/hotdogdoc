@@ -88,6 +88,8 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 
 ![System Architecture](docs/system-architecture.png)
 
+[System Architecture 바로가기][([https://dbdiagram.io/d/Copy-of-Untitled-Diagram-6a2a5e209340ecc06573d84c](https://www.figma.com/design/4ZDsag2J8YmpVDor7GbnDA/D-TO?node-id=0-1&p=f&t=aAoYlDosBIaybdME-0)](https://www.figma.com/design/4ZDsag2J8YmpVDor7GbnDA/D-TO?node-id=0-1&p=f&t=aAoYlDosBIaybdME-0)
+
 ---
 
 ## 🗄️ ERD
