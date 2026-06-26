@@ -100,6 +100,24 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 
 ---
 
+## 📄 API 명세서
+
+D-TO 프로젝트의 전체 API 명세는 Notion을 통해 관리하고 있습니다.
+
+[API 명세서 바로가기](https://www.notion.so/API-34ab3617b6918047b68cca2f660f7db7?source=copy_link)
+
+---
+
+## 🛡️ 웹 접근성 및 최적화 성과 (Lighthouse)
+
+시각 장애인 및 다양한 사용자 환경을 배포 단계에서 보장하기 위해 상품 이미지 대체 텍스트(Alt Text) 제공 및 스크린 리더 호환성을 확보했습니다. Google Lighthouse 측정 결과, **웹 접근성(Accessibility) 항목 100점**을 달성하며 높은 품질의 상용 웹 서비스 표준을 만족했습니다.
+
+<p align="center">
+  <img src="docs/lighthouse.png" width="80%" alt="Lighthouse 웹 접근성 100점 달성 결과">
+</p>
+
+---
+
 ## 🛠️ 기술 스택
 
 ### Backend
@@ -139,7 +157,7 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 
 | 이름 | 담당 |
 |------|------|
-| 이지수 | 프로젝트 총괄(PM, PL), DB 설계(ERD), API 명세 확립 및 통합 관리 |
+| 이지수 | 프로젝트 총괄(PM), DB 설계(ERD), API 명세 확립 및 통합 관리 |
 | 전이레 | Frontend / Backend Development |
 | 정인혁 | Frontend / Backend Development |
 
