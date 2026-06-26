@@ -144,27 +144,3 @@ D-TO는 직장인을 위한 맞춤형 커머스 플랫폼입니다.
 | 정인혁 | Frontend / Backend Development |
 
 ---
-
-## 📊 프로젝트 성과 및 아키텍처 명세 (Result & Evidence)
-
-D-TO 프로젝트는 시스템 안정성, 웹 접근성, 그리고 체계적인 인프라 설계를 검증하기 위해 다양한 도구를 활용하여 프로젝트 퀄리티를 관리했습니다.
-
-### 🛡️ 웹 접근성 및 최적화 성과 (Lighthouse)
-
-시각 장애인 및 다양한 사용자 환경을 배포 단계에서 보장하기 위해 상품 이미지 대체 텍스트(Alt Text) 제공 및 스크린 리더 호환성을 확보했습니다. Google Lighthouse 측정 결과, **웹 접근성(Accessibility) 항목 100점**을 달성하며 높은 품질의 상용 웹 서비스 표준을 만족했습니다.
-
-<p align="center">
-  <img src="docs/lighthouse.png" width="80%" alt="Lighthouse 웹 접근성 100점 달성 결과">
-</p>
-
-### 🔗 상세 아키텍처 및 소스코드 분석 링크
-
-인프라 설계의 무결성과 실시간 분산 환경 검증을 위한 핵심 명세 및 인프라 자동화 관련 상세 자료는 아래 링크에서 확인하실 수 있습니다.
-
-* **[Figma 인프라 아키텍처 전체보기](https://www.figma.com/design/4ZDsag2J8YmpVDor7GbnDA/D-TO?node-id=0-1&p=f&t=aAoYlDosBIaybdME-0)**
-* **[dbdiagram.io 실시간 ERD 모델링]([https://dbdiagram.io/d/Copy-of-Untitled-Diagram-6a2a5e209340ecc06573d84c](https://dbdiagram.io/d/Copy-of-Untitled-Diagram-6a2a5e209340ecc06573d84c))**
-* **[Notion 통합 API 명세서]([https://www.notion.so/API-34ab3617b6918047b68cca2f660f7db7?source=copy_link](https://www.notion.so/API-34ab3617b6918047b68cca2f660f7db7?source=copy_link))**
-* **[Redis + JWT 인증 및 가중치 수집 핵심 소스코드]([https://github.com/](https://github.com/hotdog-team/hotdog-backend))**
-
-
----
